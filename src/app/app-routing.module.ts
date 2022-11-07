@@ -7,7 +7,7 @@ import { BusListComponent } from './components/bus-list/bus-list.component';
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'create-bus' },
+  { path: '', pathMatch: 'full', redirectTo: 'bus-list' },
   { path: 'create-bus', component: BusCreateComponent },
   { path: 'edit-bus/:id', component: BusEditComponent },
   { path: 'bus-list', component: BusListComponent },
