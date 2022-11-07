@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from './../../service/api.service';
+
+
 @Component({
   selector: 'app-bus-list',
   templateUrl: './bus-list.component.html',
@@ -7,6 +9,7 @@ import { ApiService } from './../../service/api.service';
 })
 export class BusListComponent implements OnInit {
   Bus: any = [];
+  searchText;
   constructor(private apiService: ApiService) {
     this.readBus();
   }

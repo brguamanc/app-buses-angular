@@ -4,6 +4,9 @@
     There is no employee added yet!
   </p>
   <!-- Employee list -->
+   <div class="search-hero">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Ingresar un campo para buscar">
+    </div>
   <table class="table table-bordered" *ngIf="Bus.length > 0">
     <thead class="table-success">
       <tr>
@@ -16,7 +19,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let bus of Bus; let i = index">
+      <tr *ngFor="let bus of Bus | filter:searchText; let i = index">
         <th scope="row">{{ bus.busId }}</th>
         <td>{{ bus.empresa }}</td>
         <td>{{ bus.destino }}</td>

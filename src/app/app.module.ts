@@ -5,6 +5,9 @@ import { ApiService } from './service/api.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+// search module
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BusCreateComponent } from './components/bus-create/bus-create.component';
@@ -18,7 +21,14 @@ import { BusListComponent } from './components/bus-list/bus-list.component';
     BusEditComponent,
     BusListComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    Ng2SearchPipeModule,
+    HttpClientModule,
+
+  ],
   providers: [ApiService],
   bootstrap: [AppComponent],
 })
